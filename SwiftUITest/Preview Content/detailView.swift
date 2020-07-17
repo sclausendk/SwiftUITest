@@ -37,27 +37,28 @@ struct detailView: View {
             .opacity(opacity)
             .animation(.interpolatingSpring(stiffness: 80.0, damping: 15.0))
             
-            
-            
             Spacer()
-           Button(action: {
-               self.show()
-           }) {
-               Text("Show")
-           }
-           
-           Spacer()
+            
+            Button(action: {
+                self.show()
+            }) {
+                Text("Show")
+            }
+
+            Spacer()
 
             Button(action: {
                 self.reset()
             }) {
                 Text("Hide")
             }
+            
             Spacer()
-//            Slider(value: $degrees, in: 0...1, step: 0.1)
+            
         }
         
     }
+    
     func show(){
         opacity = 1.0
         
@@ -68,7 +69,6 @@ struct detailView: View {
     func skewCircle(){
         degrees = 70.0
     }
-    
     
     func reset(){
         degrees = 0.0
